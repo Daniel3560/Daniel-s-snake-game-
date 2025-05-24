@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center;   /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh;     /* Take up full viewport height */
+    margin: 0;
+    background-color: #282c34; /* Dark background */
+    color: #ffffff;         /* White text */
+    font-family: 'Press Start 2P', cursive, Arial, sans-serif; /* Pixel-style font */
+}
+
+h1 {
+    color: #4CAF50; /* Green title */
+    margin-bottom: 20px;
+}
+
+canvas {
+    background-color: #1a1a1a; /* Even darker background for the game area */
+    border: 3px solid #4CAF50; /* Green border */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.7); /* Green glow */
+}
+
+#score {
+    margin-top: 15px;
+    font-size: 1.8em; /* Larger score text */
+    color: #FFD700; /* Gold color for score */
+}
+
+#startButton {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 1.4em;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#startButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#startButton:active {
+    transform: translateY(0); /* Press effect */
+}
