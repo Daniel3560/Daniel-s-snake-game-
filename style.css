@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center;   /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh;     /* Take up full viewport height */
+    margin: 0;
+    background-color: #282c34; /* Dark background */
+    color: #ffffff;         /* White text */
+    font-family: 'Press Start 2P', cursive, Arial, sans-serif; /* Pixel-style font */
+}
+
+h1 {
+    color: #4CAF50; /* Green title */
+    margin-bottom: 20px;
+}
+
+canvas {
+    background-color: #1a1a1a; /* Even darker background for the game area */
+    border: 3px solid #4CAF50; /* Green border */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.7); /* Green glow */
+
+  /* --- NEW FOR MOBILE --- */
+    max-width: 90vw;   /* Max width is 90% of viewport width */
+    max-height: 80vh;  /* Max height is 80% of viewport height */
+    width: auto;       /* Allow width to adjust automatically */
+    height: auto;      /* Allow height to adjust automatically */
+    /* Ensure the canvas maintains its aspect ratio for a square game area */
+    /* This might be handled better in JS if you want perfect squares at all scales,
+       but this CSS generally works well for responsiveness. */
+}
+
+
+}
+
+#score {
+    margin-top: 15px;
+    font-size: 1.8em; /* Larger score text */
+    color: #FFD700; /* Gold color for score */
+}
+
+#startButton {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 1.4em;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#startButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#startButton:active {
+    transform: translateY(0); /* Press effect */
+}
+
+/* ... (existing body, h1, canvas, score, startButton styles) ... */
+
+/* --- NEW: Mobile Controls Styling --- */
+#mobile-controls {
+    display: none; /* Hidden by default for desktop */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px; /* Space between rows */
+    user-select: none; /* Prevent text selection on buttons */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For Edge */
+}
+
+.horizontal-controls {
+    display: flex;
+    gap: 5px; /* Space between left/right buttons */
+}
+
+.control-btn {
+    background-color: #6a0dad; /* A nice purple */
+    color: white;
+    border: 2px solid #9b59b6;
+    border-radius: 8px;
+    width: 60px;  /* Make buttons large enough for touch */
+    height: 60px;
+    font-size: 2em; /* Large arrows */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.control-btn:active {
+    background-color: #4a0082; /* Darker purple on press */
+    transform: scale(0.95);
+}
+
+/* Media Query: Show controls only on screens smaller than (e.g.) 768px wide */
+@media (max-width: 768px) {
+    #mobile-controls {
+        display: flex; /* Show flex container */
+    }
+
+    /* Adjust canvas size for very small screens if needed, otherwise existing max-width/height should be fine */
+    canvas {
+        max-width: 95vw; /* Give a little more room */
+        max-height: 70vh;
+    }
+}
