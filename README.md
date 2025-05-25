@@ -5,4 +5,4 @@ This is a classic Snake game built with HTML, CSS, and JavaScript. It goes beyon
 
 I have also made this game compatible with mobile allowing multiple platforms access the game.
 
-✨ Live Demo: https://daniel3560.github.io/Daniel-s-snake-game-/ ✨
+✨ Live Demo:https://daniel3560.github.io/Daniel-s-snake-game-/ ✨
